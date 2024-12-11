@@ -127,7 +127,7 @@ instance/
    - Name: `FinancialVisualBackend` (or your preferred name)
    - Environment: `Python 3`
    - Build Command: `pip3 install -r requirements.txt`
-   - Start Command: `gunicorn run:app`
+   - Start Command: `./start.sh`
    - Plan: Free (or your preferred plan)
 
 5. Add Environment Variables in Render Dashboard:

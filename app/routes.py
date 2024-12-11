@@ -96,7 +96,6 @@ def health_check():
     }
     
     try:
-        # Test database connection
         db.session.execute(text('SELECT 1'))
         db.session.commit()
     except Exception as e:
@@ -104,7 +103,6 @@ def health_check():
         health_status['database'] = 'disconnected'
         health_status['error'] = str(e)
     
-    # Set response status code based on health check results
     status_code = 200 if health_status['status'] == 'healthy' else 503
     
     return jsonify(health_status), status_code
